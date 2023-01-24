@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Who wants to be a Quizillionaire</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="score/time">
+            <div class="highscore"> view highscore</div>
+            <div class="time" id="timer"></div>
+            <div id="main"> </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="start-container">
+            <h1>Do you want to take a quiz?</h1>
+            <button id="start-button">Start</button>
+        </div>
+
+        <div class="question-container hide">
+            <h2 id="question-text">Question here</h2>
+            <div class="option-container">
+                <button id="option-1">Option 1</button>
+                <button id="option-2">Option 2</button>
+                <button id="option-3">Option 3</button>
+                <button id="option-4">Option 4</button>
+            </div>
+        </div>
+
+        <div class="end-container hide">
+            <h2>You finished the quiz!</h2>
+            <h4 id="end-score">Your score: </h4>
+
+            <label>Your Name</label>>
+            <input type="text" id="input-name">
+            <button id="save-score">Save</button>
+        </div>
+
+
+    </main>
+
+    <footer></footer>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
