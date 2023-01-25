@@ -1,5 +1,12 @@
-.start-container {
+body{
+    font-family: Verdana, Arial, sans-serif;
+}
 
+
+
+
+.start-container {
+   
 }
 
 .question-container {
@@ -16,5 +23,37 @@
 }
 
 .option-container button {
-    width: 30%;
+    background-color: rgb(102, 209, 209);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 40%;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+.option-container button:hover{
+    background-color: rgb(30, 235, 235);
+    color: white;
+}
+#start-button{
+    
+        background-color: rgb(94, 27, 94);
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+      
 }

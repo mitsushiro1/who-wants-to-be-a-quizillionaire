@@ -4,34 +4,64 @@ var timeLeft = 30;
 
 var questions = [
     {
-        text: "Question 1???",
+        text: "How many provinces and territories are there in Canada?",
         options: [
-            "Q1 option1",
-            "Q1 option2",
-            "Q1 option3",
-            "Q1 option4"
+            "19",
+            "11",
+            "13",
+            "15"
         ],
-        correct: "Q1 option1"
+        correct: "13"
     },
     {
-        text: "Question 2???",
+        text: "What is the capital city of Canada?",
         options: [
-            "Q2 option1",
-            "Q2 option2",
-            "Q2 option3",
-            "Q2 option4"
+            "New York",
+            "Toronto",
+            "Vancouver",
+            "Ottawa"
         ],
-        correct: "Q2 option4"
+        correct: "Ottawa"
     },
     {
-        text: "Question 3???",
+        text: "What is the capital of Yukon?",
         options: [
-            "Q3 option1",
-            "Q3 option2",
-            "Q3 option3",
-            "Q3 option4"
+            "Yellowknife",
+            "Whitehorse",
+            "Iqualuit",
+            "Bluepenguin"
         ],
-        correct: "Q3 option2"
+        correct: "Whitehorse"
+    },
+    {
+        text: "How many great lakes are there in Ontario?",
+        options: [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        correct: "5"
+    },
+    {
+        text: "What is the oldest company in Canada?",
+        options: [
+            "Canada Goose",
+            "Tim Hortons",
+            "MEC",
+            "Hudson's Bay Company"
+        ],
+        correct: "Hudson's Bay Company"
+    },
+    {
+        text: "How many time zones does Canada have?",
+        options: [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        correct: "6"
     }
 ];
 
@@ -59,7 +89,7 @@ option1.addEventListener("click", checkAnswers);
 option2.addEventListener("click", checkAnswers);
 option3.addEventListener("click", checkAnswers);
 option4.addEventListener("click", checkAnswers);
-saveScoreBtn.addEventListener("click", saveScore)
+saveScoreBtn.addEventListener("click", saveScore);
 
 function startGame (event){
     startTimer()
@@ -79,6 +109,7 @@ function endGame () {
     endContainer.classList.remove("hide");
 
     endScore.textContent = "Your score: " + totalScore
+    saveScore();
 }
 
 function displayQuestion () {
@@ -141,5 +172,13 @@ function saveScore () {
 
     records.push(data);
 
-    localStorage.setItem("highscores", JSON.stringify(records))
-}
+    localStorage.setItem("highscores", JSON.stringify(records));
+    
+};
+
+function renderMessage (){
+    var scoreName = JSON.parse(localStorage.getItem("highschores"))
+  // if (scoreName !== null){
+  //  document.querySelector("")
+  // }
+};
