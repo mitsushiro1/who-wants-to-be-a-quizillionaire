@@ -110,7 +110,6 @@ function endGame () {
     endContainer.classList.remove("hide");
 
     endScore.textContent = "Your score: " + totalScore
-    saveScore();
 }
 
 function displayQuestion () {
@@ -174,7 +173,6 @@ function saveScore () {
     records.push(data);
 
     localStorage.setItem("highscores", JSON.stringify(records));
-    
     showScore();
 };
 function showScore() {
