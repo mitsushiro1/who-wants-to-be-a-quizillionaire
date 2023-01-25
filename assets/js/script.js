@@ -83,6 +83,7 @@ var endContainer = document.querySelector(".end-container");
 var endScore = document.querySelector("#end-score");
 var saveScoreBtn = document.querySelector("#save-score")
 var inputName = document.querySelector("#input-name")
+var seeScore = document.querySelector("#scoresList")
 
 startEl.addEventListener("click", startGame);
 option1.addEventListener("click", checkAnswers);
@@ -158,7 +159,7 @@ function startTimer () {
         } else{
             
             clearInterval(timeInterval);
-            // sendMessage();
+            
         }
         
         }, 1000);
@@ -174,11 +175,16 @@ function saveScore () {
 
     localStorage.setItem("highscores", JSON.stringify(records));
     
+    showScore();
+};
+function showScore() {
+    var highScores = JSON.parse(localStorage.getItem("highscores")) || [];
+    console.log(highScores);
+    if (highScores !== null) {
+        document.getElementById("score").innerHTML = data.totalScore;
+        document.getElementById("name").innerHTML = data.name;
+        } else {
+          return;
+        }
 };
 
-function renderMessage (){
-    var scoreName = JSON.parse(localStorage.getItem("highschores"))
-  // if (scoreName !== null){
-  //  document.querySelector("")
-  // }
-};
