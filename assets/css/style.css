@@ -58,8 +58,5 @@ body{
       
 }
 li{
-    display: none;
-}
-.highscore{
-    
+    list-style: none;
 }
