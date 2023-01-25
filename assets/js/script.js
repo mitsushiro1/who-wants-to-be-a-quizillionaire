@@ -179,12 +179,12 @@ function saveScore () {
 };
 function showScore() {
     var highScores = JSON.parse(localStorage.getItem("highscores")) || [];
-    console.log(highScores);
     if (highScores !== null) {
-        document.getElementById("score").innerHTML = data.totalScore;
-        document.getElementById("name").innerHTML = data.name;
-        } else {
-          return;
-        }
+        for(var i = 0; i<highScores.length; i++){
+           document.getElementById("score").innerHTML = highScores[0].score;
+           document.getElementById("name").innerHTML = highScores[0].name;
+        } 
+    } else {
+        return;
+    }
 };
-

@@ -57,9 +57,9 @@ body{
         border-radius: 8px;
       
 }
-#score{
+li{
     display: none;
 }
-#name{
-    display: none;
+.highscore{
+    
 }
