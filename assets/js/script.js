@@ -180,7 +180,7 @@ function showScore() {
     if (highScores !== null) {
         for(var i = 0; i<highScores.length; i++){
            document.getElementById("score").innerHTML = highScores[0].score;
-           document.getElementById("name").innerHTML = highScores[0].inputName;
+           document.getElementById("name").innerHTML = highScores[0].name;
         } 
     } else {
         return;
