@@ -83,7 +83,7 @@ var endContainer = document.querySelector(".end-container");
 var endScore = document.querySelector("#end-score");
 var saveScoreBtn = document.querySelector("#save-score")
 var inputName = document.querySelector("#input-name")
-var seeScore = document.querySelector("#scoresList")
+
 
 startEl.addEventListener("click", startGame);
 option1.addEventListener("click", checkAnswers);
@@ -179,10 +179,16 @@ function showScore() {
     var highScores = JSON.parse(localStorage.getItem("highscores")) || [];
     if (highScores !== null) {
         for(var i = 0; i<highScores.length; i++){
-           document.getElementById("score").innerHTML = highScores[0].score;
-           document.getElementById("name").innerHTML = highScores[0].name;
+            var scoreEl = document.createElement("li");
+            scoreEl.innerText =  highScores[0].score;
+            document.getElementById("scoresList").appendChild(scoreEl);
+            var nameEl = document.createElement("li");
+            nameEl.innerText = highScores[0].name;
+            document.getElementById("scoresList").appendChild(nameEl);
+        
         } 
     } else {
         return;
     }
 };
+showScore();

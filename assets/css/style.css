@@ -3,16 +3,6 @@ body{
 }
 
 
-
-
-.start-container {
-   
-}
-
-.question-container {
-
-}
-
 .hide {
     display: none !important;
 }
@@ -57,6 +47,6 @@ body{
         border-radius: 8px;
       
 }
-/* li{
-//     list-style:none;
-// }
+ul{
+    list-style: none;
+}
